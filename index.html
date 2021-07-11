@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lipski</title>
     <style>
-      body {
-        background-color: #eeeeee;
-      }
       main {
         max-width: 600px;
-        margin: 0 auto;
+        margin: 50px auto;
       }
       h1 {
         text-align: center;
@@ -20,8 +17,10 @@
         border-bottom-style: dotted;
         border-bottom-width: 1px;
       }
-      iframe {
-        width: 600px;
+      .display {
+        object-fit: none;
+        width: 100%;
+        height: 200px;
         border: none;
       }
     </style>
@@ -33,21 +32,48 @@
       </header>
       <article>
         <h2>Intro</h2>
-        <p>My name is Felix Lipski. This is my main site.</p>
+        <p>
+          My name is Felix Lipski. I'm a programmer from Poland. I specialize in
+          Front-End development.
+        </p>
       </article>
       <article>
         <h2>Programming</h2>
-        <p>Professionally, I know React and Python pretty well.</p>
+        <p>
+          Professionally, I know React, Python and various other web
+          technologies. Here's my Resume/CV:
+        </p>
+        <a href="lipski-cv.pdf">
+          <code>Jan Lipski CV</code>
+        </a>
+        <p>
+          I like functional programming, but I especially like the ML-like
+          languages, such as Nix and OCaml.
+        </p>
         <p>This my github:</p>
-        <a href="https://github.com/felix-lipski"
-          ><code>github:felix-lipski</code></a
-        >
+        <a href="https://github.com/felix-lipski">
+          <code>github:felix-lipski</code>
+        </a>
       </article>
+
+      <article>
+        <h2>Apply studio</h2>
+        <p>
+          This is a TUI interface I've build for myself to speed up my job
+          applying process.
+        </p>
+        <img class="display" src="apply-studio-sc.png" />
+        <p>It uses Python + Selenium + Chromium + Blessed</p>
+        <a href="https://github.com/felix-lipski/apply-studio">
+          <code>github:felix-lipski/apply-studio</code>
+        </a>
+      </article>
+
       <article>
         <h2>Music Generation</h2>
         <p>
-          I work on a music generation algorithm. Right now melody and rythm
-          generation are pretty solid. Chord selection / harmonic composotion is
+          I work on a music generation algorithm. Right now melody and rhythm
+          generation are pretty solid. Chord selection / harmonic composition is
           hacked on, but it works. Timbre generation is the current focus of
           development.
         </p>
@@ -55,19 +81,36 @@
           Here's an example loop created by the melody generation module, played
           on the Serum synth (I did not make the synth).
         </p>
-        <iframe src="https://www.youtube.com/embed/lz3J09FUPxg"></iframe>
+        <iframe
+          class="display"
+          src="https://www.youtube.com/embed/lz3J09FUPxg"
+        ></iframe>
         <p>
           This project has been rewritten at least 6 times, allowing me to learn
-          new languages and thechnologies each time. These being: Python,
+          new languages and technologies each time. These being: Python,
           JavaScript, Lua, C, Haskell, Julia, Rust and Ocaml
         </p>
+        <p>
+          For this project, I'd like to keep the most important parts closed
+          source for now, but here are some less significant parts:
+        </p>
+        <a href="https://github.com/felix-lipski/bmt-sink">
+          <code>github:felix-lipski/bmt-sink</code>
+        </a>
       </article>
       <article>
         <h2>Normal Music</h2>
         <p>
-          I also (used to) make songs the normal way. Here are my two
-          favourites.
+          I also (used to) make songs the normal way. Here are my two favorites.
         </p>
+        <header><h3>119</h3></header>
+        <audio controls style="width: 100%">
+          <source src="119c.wav" type="audio/wav" />
+        </audio>
+        <header><h3>205</h3></header>
+        <audio controls style="width: 100%">
+          <source src="205.4f.mp3" type="audio/mp3" />
+        </audio>
       </article>
       <article>
         <h2>Game</h2>
@@ -77,11 +120,18 @@
           original stylized look, loosely based on
           <a href="https://youtu.be/CLr2qbRzY6s">this video</a>.
         </p>
+        <img class="display" src="dithering-sc.png" />
       </article>
       <article>
         <h2>Contact</h2>
-        <p>Email:</p>
-        <code>jankazimierzlipski@gmail.com</code>
+        <p>Work related:</p>
+        <a href="mailto:jan.kazimierz.lipski@gmail.com">
+          <code>jan.kazimierz.lipski@gmail.com</code>
+        </a>
+        <p>Other:</p>
+        <a href="mailto:felix.lipski7@gmail.com">
+          <code>felix.lipski7@gmail.com</code>
+        </a>
       </article>
     </main>
   </body>
