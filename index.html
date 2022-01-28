@@ -23,9 +23,55 @@
         height: 200px;
         border: none;
       }
+      #dvd {
+        height: 60px;
+        width: 100px;
+        position: absolute;
+        z-index: -10;
+      }
     </style>
+    <script>
+      function randInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+      window.onload = function () {
+        var dvd = document.getElementById("dvd");
+        var t = setInterval(move, 10);
+
+        var posX = 0;
+        var posY = 0;
+        var velX = 1;
+        var velY = 1;
+        var hue = 0;
+
+        function move() {
+          if (posX + 100 > window.innerWidth + window.scrollX) {
+            velX = -1;
+          hue = randInt(360);
+          }
+          if (posX < window.scrollX) {
+            velX = 1;
+          hue = randInt(360);
+          }
+          if (posY + 60 > window.innerHeight + window.scrollY) {
+            velY = -1;
+          hue = randInt(360);
+          }
+          if (posY < window.scrollY) {
+            velY = 1;
+          hue = randInt(360);
+          }
+          posX += velX;
+          posY += velY;
+          dvd.style.left = posX + "px";
+          dvd.style.top = posY + "px";
+          dvd.style.filter = "hue-rotate(" + hue + "deg)";
+        }
+      };
+    </script>
   </head>
   <body>
+    <img src="dvd.png" id="dvd" />
     <main>
       <header>
         <h1>Felix Lipski</h1>
@@ -140,13 +186,22 @@
       <article>
         <h2>Cool websites</h2>
         <p>Some websites I enjoy:</p>
-        <a href="https://existentialtype.wordpress.com/"><code>Existential Type</code></a><br/>
-        <a href="https://notrelated.xyz/"><code>Not Related</code></a><br/> 
-        <a href="http://www.marktarver.com/computing.htm"><code>Mark Tarver</code></a><br/>
-        <a href="https://bartoszmilewski.com/"><code>Bartosz Milewski</code></a><br/>
-        <a href="https://www.fuw.edu.pl/~kostecki/"><code>Ryszard Paweł Kostecki</code></a><br/>
-        <a href="http://linas.org/art-gallery/"><code>Linas Vepstas</code></a><br/>
-        <a href=""><code></code></a><br/>
+        <a href="https://existentialtype.wordpress.com/"
+          ><code>Existential Type</code></a
+        ><br />
+        <a href="https://notrelated.xyz/"><code>Not Related</code></a
+        ><br />
+        <a href="http://www.marktarver.com/computing.htm"
+          ><code>Mark Tarver</code></a
+        ><br />
+        <a href="https://bartoszmilewski.com/"><code>Bartosz Milewski</code></a
+        ><br />
+        <a href="https://www.fuw.edu.pl/~kostecki/"
+          ><code>Ryszard Paweł Kostecki</code></a
+        ><br />
+        <a href="http://linas.org/art-gallery/"><code>Linas Vepstas</code></a
+        ><br />
+        <a href=""><code></code></a><br />
       </article>
     </main>
   </body>
