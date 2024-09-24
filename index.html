@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lipski</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <style>
+      body {
+          background-image: linear-gradient(darkcyan, slateblue);
+      }
       main {
         max-width: 600px;
         margin: 50px auto;
@@ -13,7 +17,7 @@
       h1 {
         text-align: center;
       }
-      h2 {
+      .header {
         border-bottom-style: dotted;
         border-bottom-width: 1px;
       }
@@ -27,7 +31,6 @@
         height: 30px;
       }
       #logos {
-        width: 100%;
         display: flex;
         justify-content: space-between;
         overflow: hidden;
@@ -38,20 +41,36 @@
     </style>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Felix Lipski</h1>
+    <!-- <div class="window" style="margin: 32px; width: 250px"> -->
+    <!--   <div class="title-bar"> -->
+    <!--     <div class="title-bar-text"> -->
+    <!--       My First VB4 Program -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!--   <div class="window-body"> -->
+    <!--     <p>Hello, world!</p> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <main class="window">
+      <header class="title-bar">
+        <div class="title-bar-text">
+          Felix Lipski
+        </div>
       </header>
+      <!-- <header> -->
+      <!--   <h1>Felix Lipski</h1> -->
+      <!-- </header> -->
+      <div class="window-body">
       <article>
-        <h2>Intro</h2>
+        <p class="header">Intro</p>
         <p>
           My name is Felix Lipski. I'm a programmer from Poland. I specialize in
           functional programming.
         </p>
       </article>
       <article>
-        <h2>Programming</h2>
-        <div id="logos">
+        <p class="header">Programming</p>
+        <ul class="tree-view" id="logos">
           <img src="logos/react.png" class="logo" />
           <img src="logos/typescript.png" class="logo" />
           <img src="logos/scala.png" class="logo" />
@@ -67,7 +86,7 @@
           <img src="logos/c.png" class="logo" />
           <img src="logos/rust.png" class="logo" />
           <img src="logos/julia.png" class="logo" />
-        </div>
+        </ul>
         <p>
           Professionally, I do React, TypeScript and Scala. Here's my Resume/CV:
         </p>
@@ -85,7 +104,7 @@
       </article>
 
       <article>
-        <h2>Apply studio</h2>
+        <p class="header">Apply studio</p>
         <p>
           This is a TUI interface I've build for myself to speed up my job
           applying process.
@@ -98,7 +117,7 @@
       </article>
 
       <article>
-        <h2>Music Generation</h2>
+        <p class="header">Music Generation</p>
         <p>
           I work on a music generation algorithm. Right now melody and rhythm
           generation are pretty solid. Chord selection / harmonic composition is
@@ -127,7 +146,7 @@
         </a>
       </article>
       <article>
-        <h2>Normal Music</h2>
+        <p class="header">Normal Music</p>
         <pre>
 _________________________________________________________
 |  |█| |█|  |  |█| |█| |█|  |  |█| |█|  |  |█| |█| |█|  |
@@ -152,7 +171,7 @@ _________________________________________________________
         </audio>
       </article>
       <article>
-        <h2>Game</h2>
+        <p class="header">Game</p>
         <p>
           I also "work" on a game/simulation, but really, I've just been messing
           around with the graphics part for years. Im trying to achieve an
@@ -162,22 +181,26 @@ _________________________________________________________
         <img class="display" src="dithering-sc.png" />
       </article>
       <article>
-        <h2>Contact</h2>
-        <p>LinkedIn:</p>
-        <a href="https://www.linkedin.com/in/jan-lipski-08592718a/">
-          <code>Jan Lipski</code>
-        </a>
+        <p class="header">Contact</p>
         <p>Email:</p>
-        <a href="mailto:jan.kazimierz.lipski@gmail.com">
-          <code>jan.kazimierz.lipski@gmail.com</code>
+        <a href="mailto:felix.lipski7@gmail.com">
+          <code>felix.lipski7@gmail.com</code>
         </a>
+        <!-- <p>LinkedIn:</p> -->
+        <!-- <a href="https://www.linkedin.com/in/jan-lipski-08592718a/"> -->
+        <!--   <code>Jan Lipski</code> -->
+        <!-- </a> -->
+        <!-- <p>Email:</p> -->
+        <!-- <a href="mailto:jan.kazimierz.lipski@gmail.com"> -->
+        <!--   <code>jan.kazimierz.lipski@gmail.com</code> -->
+        <!-- </a> -->
         <!-- <p>Non-work:</p> -->
         <!-- <a href="mailto:felix.lipski7@gmail.com"> -->
         <!--   <code>felix.lipski7@gmail.com</code> -->
         <!-- </a> -->
       </article>
       <article>
-        <h2>Cool websites</h2>
+        <p class="header">Cool websites</p>
         <p>Some websites I enjoy:</p>
         <a href="https://existentialtype.wordpress.com/"
           ><code>Existential Type</code></a
@@ -196,6 +219,7 @@ _________________________________________________________
         ><br />
         <a href=""><code></code></a><br />
       </article>
+      </div>
     </main>
   </body>
 </html>
