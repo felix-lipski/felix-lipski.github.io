@@ -1,153 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lipski</title>
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Lipski</title>
     <style>
-      body {
-          background-image: linear-gradient(darkcyan, slateblue);
-      }
-      main {
-        max-width: 600px;
-        margin: 50px auto;
-      }
-      h1 {
-        text-align: center;
-      }
-      .header {
-        border-bottom-style: dotted;
-        border-bottom-width: 1px;
-      }
-      .display {
-        object-fit: none;
-        width: 100%;
-        height: 200px;
-        border: none;
-      }
-      .logo {
-        height: 30px;
-      }
-      #logos {
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-      }
-      .piano {
-        align-text: center;
-      }
+        body {
+          --white: #ffffdd
+          padding: 2em;
+          color:#222222;
+          background-color: var(--white);
+          max-width: calc(1050px + 2em);
+          margin: 1rem auto;
+
+          font-family: monospace;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        main { 
+          margin: 0 1em;
+          /* max-width: 1050px; */
+        }
+
+        iframe, .foo, section, .square-img, .wp { border: 1px solid #222222; }
+
+        .spotify { width: calc(100% - 2px); }
+
+        section {
+          padding-left: 1em;
+          padding-right: 1em;
+          background-color: #222222;
+          color: var(--white);
+
+          margin-bottom: 1em;
+
+          color: #222222;
+          background-color:  var(--white);
+        }
+
+        .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .square-img {
+          max-width: calc(100% - 2px);
+        }
+
+        .wp {
+          max-width: 100%;
+          max-height: 512px;
+          overflow-x: scroll;
+          scrollbar-color: #222222 #ffffff;
+          background-color: #ffffff;
+        }
+
+        .green, a { color: #77aa00 }
+        .blue     { color: #0066ff }
+        .red      { color: #cc2200 }
+        .purple   { color: #6600ff }
+        .black    { color: #222222 }
+        .yellow   { color: #ccbb00 }
+        .cyan     { color: #00aa77 }
+        .orange   { color: #ee6600 }
+        span, a   { font-weight: bold; }
     </style>
-  </head>
-  <body>
-    <!-- <div class="window" style="margin: 32px; width: 250px"> -->
-    <!--   <div class="title-bar"> -->
-    <!--     <div class="title-bar-text"> -->
-    <!--       My First VB4 Program -->
-    <!--     </div> -->
-    <!--   </div> -->
-    <!--   <div class="window-body"> -->
-    <!--     <p>Hello, world!</p> -->
-    <!--   </div> -->
-    <!-- </div> -->
-    <main class="window">
-      <header class="title-bar">
-        <div class="title-bar-text">
-          Felix Lipski
-        </div>
-      </header>
-      <!-- <header> -->
-      <!--   <h1>Felix Lipski</h1> -->
-      <!-- </header> -->
-      <div class="window-body">
-      <article>
-        <p class="header">Intro</p>
-        <p>
-          My name is Felix Lipski. I'm a programmer from Poland. I specialize in
-          functional programming.
-        </p>
-      </article>
-      <article>
-        <p class="header">Programming</p>
-        <ul class="tree-view" id="logos">
-          <img src="logos/react.png" class="logo" />
-          <img src="logos/typescript.png" class="logo" />
-          <img src="logos/scala.png" class="logo" />
-          <img src="logos/nix.png" class="logo" />
-          <img src="logos/haskell.png" class="logo" />
-          <img src="logos/gnu.png" class="logo" />
-          <img src="logos/racket.png" class="logo" />
-          <img src="logos/prolog.png" class="logo" />
-          <img src="logos/ocaml.png" class="logo" />
-          <img src="logos/python.png" class="logo" />
-          <img src="logos/lua.png" class="logo" />
-          <img src="logos/javascript.png" class="logo" />
-          <img src="logos/c.png" class="logo" />
-          <img src="logos/rust.png" class="logo" />
-          <img src="logos/julia.png" class="logo" />
+</head>
+<body>
+  <main>
+    <p class="header">Intro</p>
+    <section><p>My name is Felix Lipski. I'm a programmer and general creator from Poland.</p></section>
+
+    <p class="header">Links</p>
+    <section>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jan-l-08592718a/" class="blue">LinkedIn</a></li>
+        <li><a href="Jan-Lipski-resume.pdf" class="cyan">Resume</a></li>
+        <li><a href="https://open.spotify.com/artist/5R3uLIcUbwYY6JZqWYfMsf?si=a_fufNY6RvOImZka_bjsyw" class="green">Spotify</a></li>
+        <li><a href="https://github.com/felix-lipski" class="yellow">GitHub</a></li>
+        <li><a href="https://felix-lipski.itch.io/" class="red">itch.io</a></li>
+      </ul>
+    </section>
+
+    <p class="header">Professional programming</p>
+    <section>
+      <p>I specialize in Full-stack development and functional programming. I learn very quickly and I'm always looking to expand into other areas. I'm always open to hear about new job opportunities, but <i>especially</i> those, which involve technologies I don't yet know.</p>
+      <p>Languages experienced:</p>
+      <ul>
+        <li><span class="blue">TypeScript</span> - 3 years exp.</li>
+        <li><span class="purple">Haskell</span> - 2 years exp.</li>
+        <li><span class="red">Scala</span>  - 1 years exp.</li>
+      </ul>
+      <p>Technologies witnessed:</p>
+      <ul>
+        <li>React</li>
+        <li>React Native</li>
+        <li>PostgreSQL</li>
+        <li>Svelte</li>
+        <li>git</li>
+        <li>Linux</li>
+        <li>Docker</li>
+        <li>Nix</li>
+        <li>ZIO</li>
+      </ul>
+      <p>Skills possessed:</p>
+      <ul>
+        <li>Full-stack development</li>
+        <li>Back-end development</li>
+        <li>Front-end development</li>
+        <li>Functional programming</li>
+        <li>Logic programming</li>
+        <li>Object Oriented Programming</li>
+        <li>Domain Driven Design</li>
+        <li>Blockchain & Cryptocurrencies</li>
+      </ul>
+    </section>
+
+    <p class="header">Hobbyist programming</p>
+    <section>
+      <p>In my free time I develop games and work on a music generation algorithm.</p>
+    </section>
+
+    <div class="gallery">
+      <iframe width="512" frameborder="0" src="https://itch.io/embed/2989521?border_width=0&amp;link_color=77aa00&amp;border_color=222222" width="550" height="165"><a href="https://felix-lipski.itch.io/pauzomenunator">PAUZOMENUNATOR by felix-lipski, gekon-wav</a></iframe>
+      <iframe width="512" src="https://www.youtube.com/embed/Zd2NBQKT5jU?si=4ndgesFUCa7MCcO_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p></p>
+
+    <section>
+      <p>Languages I have known and loved:</p>
+      <ul>
+        <li><span class="red">Prolog</span></li>
+        <li><span class="yellow">Ocaml</span></li>
+        <li><span class="orange">Zig</span></li>
+        <li><span class="green">LISP</span></li>
+        <li><span class="red">Futhark</span></li>
+        <li><span class="yellow">Python</span></li>
+        <li><span class="blue">GDScript</span></li>
+        <li><span class="yellow">Nim</span></li>
+        <li><span class="blue">Nix</span></li>
+        <li><span class="black">C</span></li>
+        <li><span class="green">C++</span></li>
+      </ul>
+    </section>
+
+    <p class="header">Music</p>
+    <section>
+      <p>Sounds I like and employ:
+        <ul>
+          <li>baroque eclecticism - mixing woodwinds and strings with non-classical genres</li>
+          <li>anything that reminds me of "game music" - Trackers, soundfonts, etc.</li>
+          <li>anything related to magnetic tapes - prime example being the Mellotron </li>
+          <li>"cheap" and broken sounds of toy instruments</li>
         </ul>
-        <p>
-          Professionally, I do React, TypeScript and Scala. Here's my Resume/CV:
-        </p>
-        <a href="lipski-cv.pdf">
-          <code>Jan Lipski CV</code>
-        </a>
-        <p>
-          I like functional programming, but I especially like the ML-like
-          languages, such as Nix and OCaml.
-        </p>
-        <p>This is my github:</p>
-        <a href="https://github.com/felix-lipski">
-          <code>github:felix-lipski</code>
-        </a>
-      </article>
+      </p>
+      <!-- <p>I think the primary aesthetic aim of musicians should be to create the most <i>colorful</i> composition they can.</i></p> -->
+      <p>I play the guitar, piano and clarinet. Arguably, I also sing.</p>
+    </section>
+    <iframe class="spotify" style="background-color:#222222" src="https://open.spotify.com/embed/artist/5R3uLIcUbwYY6JZqWYfMsf?utm_source=generator&theme=0" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-      <article>
-        <p class="header">Apply studio</p>
-        <p>
-          This is a TUI interface I've build for myself to speed up my job
-          applying process.
-        </p>
-        <img class="display" src="apply-studio-sc.png" />
-        <p>It uses Python + Selenium + Chromium + Blessed</p>
-        <a href="https://github.com/felix-lipski/apply-studio">
-          <code>github:felix-lipski/apply-studio</code>
-        </a>
-      </article>
+    <p class="header">Visual Arts</p>
+    <section>
+      <p>I draw pixel art and am fairly fluent in <span class="yellow">Blender</span>.</p>
+    </section>
+    <div class="gallery">
+      <img class="square-img" src="planet.png"/>
+      <img class="square-img" src="knight.png"/>
+    </div>
 
-      <article>
-        <p class="header">Music Generation</p>
-        <p>
-          I work on a music generation algorithm. Right now melody and rhythm
-          generation are pretty solid. Chord selection / harmonic composition is
-          hacked on, but it works. Timbre generation is the current focus of
-          development.
-        </p>
-        <p>
-          Here's an example loop created by the melody generation module, played
-          on the Serum synth (I did not make the synth).
-        </p>
-        <iframe
-          class="display"
-          src="https://www.youtube.com/embed/lz3J09FUPxg"
-        ></iframe>
-        <p>
-          This project has been rewritten at least 7 times, allowing me to learn
-          new languages and technologies each time. These being: Python,
-          JavaScript, Lua, C, Haskell, Julia, Rust, Ocaml, Prolog and Scheme.
-        </p>
-        <p>
-          For this project, I'd like to keep the most important parts closed
-          source for now, but here are some less significant parts:
-        </p>
-        <a href="https://github.com/felix-lipski/bmt-sink">
-          <code>github:felix-lipski/bmt-sink</code>
-        </a>
-      </article>
-      <article>
-        <p class="header">Normal Music</p>
-        <pre>
+    <p></p>
+    <section>
+      <p>I like retrofuturism and extensive use of dithering and palette limiting.</p>
+    </section>
+
+    <div class="wp">
+      <img src="wp.png"/>
+    </div>
+
+    <p class="header">Personal & Misc.</p>
+    <section>
+      <p>I run, bike and sauna a lot. I run whenever normal people would walk.</p>
+      <p>I like all things industrial. Ruhr Valley is my favourite place on Earth.</p>
+      <p>I know a bit of Latin, German, Russian and French, although not on a communicative level.</p>
+      <p>I think creation is the highest virtue in life. <a href="https://lukesmith.xyz/articles/hedonism-asceticism-and-the-hermetic-answer/">Here's an interesting article on the matter.</a></p>
+      <p>I've invented a few dishes.</p>
+      <p>My other interests include: history, philosophy, religion</p>
+    </section>
+    <p class="header">Cool websites I enjoy</p>
+    <section>
+    <ul>
+      <li><a href="https://notrelated.xyz/">Not Related</a> - podcast about history, philosophy and science. focus on very unknown subjects and theories</li>
+      <li><a href="https://existentialtype.wordpress.com/">Existential Type</a> - functional programming and computer science knowledge</li>
+      <li><a href="https://bartoszmilewski.com/">Bartosz Milewski</a> - functional programming and computer science knowledge</li>
+      <li><a href="https://www.behindthename.com/">Behind the name</a> - meanings of names</li>
+      <li><a href="http://linas.org/art-gallery/">Linas Vepstas</a> - cool graphs</li>
+      <li><a href="https://www.unz.com/author/first-millennium-revisionist/">First Millenium Revisionist</a> - tldr. the Roman Empire is fake</li>
+      <li><a href="https://wiby.me/">Wiby</a> - search engine for minimalist and retro websites (not unlike this one :D)</li>
+    </ul>
+    </section>
+    <!-- <pre>
 _________________________________________________________
 |  |█| |█|  |  |█| |█| |█|  |  |█| |█|  |  |█| |█| |█|  |
 |  |█| |█|  |  |█| |█| |█|  |  |█| |█|  |  |█| |█| |█|  |
@@ -156,70 +210,7 @@ _________________________________________________________
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |___|___|___|___|___|___|___|___|___|___|___|___|___|___|
-      </pre
-        >
-        <p>
-          I also (used to) make songs the normal way. Here are my two favorites.
-        </p>
-        <header><h3>119</h3></header>
-        <audio controls style="width: 100%">
-          <source src="119c.wav" type="audio/wav" />
-        </audio>
-        <header><h3>205</h3></header>
-        <audio controls style="width: 100%">
-          <source src="205.4f.mp3" type="audio/mp3" />
-        </audio>
-      </article>
-      <article>
-        <p class="header">Game</p>
-        <p>
-          I also "work" on a game/simulation, but really, I've just been messing
-          around with the graphics part for years. Im trying to achieve an
-          original stylized look, loosely based on
-          <a href="https://youtu.be/CLr2qbRzY6s">this video</a>.
-        </p>
-        <img class="display" src="dithering-sc.png" />
-      </article>
-      <article>
-        <p class="header">Contact</p>
-        <p>Email:</p>
-        <a href="mailto:felix.lipski7@gmail.com">
-          <code>felix.lipski7@gmail.com</code>
-        </a>
-        <!-- <p>LinkedIn:</p> -->
-        <!-- <a href="https://www.linkedin.com/in/jan-lipski-08592718a/"> -->
-        <!--   <code>Jan Lipski</code> -->
-        <!-- </a> -->
-        <!-- <p>Email:</p> -->
-        <!-- <a href="mailto:jan.kazimierz.lipski@gmail.com"> -->
-        <!--   <code>jan.kazimierz.lipski@gmail.com</code> -->
-        <!-- </a> -->
-        <!-- <p>Non-work:</p> -->
-        <!-- <a href="mailto:felix.lipski7@gmail.com"> -->
-        <!--   <code>felix.lipski7@gmail.com</code> -->
-        <!-- </a> -->
-      </article>
-      <article>
-        <p class="header">Cool websites</p>
-        <p>Some websites I enjoy:</p>
-        <a href="https://existentialtype.wordpress.com/"
-          ><code>Existential Type</code></a
-        ><br />
-        <a href="https://notrelated.xyz/"><code>Not Related</code></a
-        ><br />
-        <a href="http://www.marktarver.com/computing.htm"
-          ><code>Mark Tarver</code></a
-        ><br />
-        <a href="https://bartoszmilewski.com/"><code>Bartosz Milewski</code></a
-        ><br />
-        <a href="https://www.fuw.edu.pl/~kostecki/"
-          ><code>Ryszard Paweł Kostecki</code></a
-        ><br />
-        <a href="http://linas.org/art-gallery/"><code>Linas Vepstas</code></a
-        ><br />
-        <a href=""><code></code></a><br />
-      </article>
-      </div>
-    </main>
-  </body>
+    </pre> -->
+  </main>
+</body>
 </html>
