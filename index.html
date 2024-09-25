@@ -6,11 +6,10 @@
     <title>Felix Lipski</title>
     <style>
         body {
-          --white: #ffffdd
           padding: 2em;
           color:#222222;
-          background-color: var(--white);
-          max-width: calc(1050px + 2em);
+          background-color: #ffffff;
+          max-width: calc(1042px + 2em);
           margin: 1rem auto;
 
           font-family: monospace;
@@ -19,10 +18,7 @@
           font-style: normal;
         }
 
-        main { 
-          margin: 0 1em;
-          /* max-width: 1050px; */
-        }
+        main { margin: 0 1em; }
 
         iframe, .foo, section, .square-img, .wp { border: 1px solid #222222; }
 
@@ -33,9 +29,7 @@
           padding-right: 1em;
           background-color: #222222;
           color: var(--white);
-
           margin-bottom: 1em;
-
           color: #222222;
           background-color:  var(--white);
         }
@@ -44,6 +38,7 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
+          gap: 1em;
         }
 
         .square-img {
@@ -58,21 +53,21 @@
           background-color: #ffffff;
         }
 
-        .green, a { color: #77aa00 }
-        .blue     { color: #0066ff }
-        .red      { color: #cc2200 }
         .purple   { color: #6600ff }
-        .black    { color: #222222 }
-        .yellow   { color: #ccbb00 }
+        .blue     { color: #0066ff }
         .cyan     { color: #00aa77 }
+        .green, a { color: #77aa00 }
+        .yellow   { color: #ccbb00 }
         .orange   { color: #ee6600 }
+        .red      { color: #cc2200 }
+        .black    { color: #222222 }
         span, a   { font-weight: bold; }
     </style>
 </head>
 <body>
   <main>
     <p class="header">Intro</p>
-    <section><p>My name is Felix Lipski. I'm a programmer and general creator from Poland.</p></section>
+    <section><p>My name is Felix Lipski. I'm a programmer and creator from <span class="red">Poland.</span></p></section>
 
     <p class="header">Links</p>
     <section>
@@ -81,6 +76,7 @@
         <li><a href="Jan-Lipski-resume.pdf" class="cyan">Resume</a></li>
         <li><a href="https://open.spotify.com/artist/5R3uLIcUbwYY6JZqWYfMsf?si=a_fufNY6RvOImZka_bjsyw" class="green">Spotify</a></li>
         <li><a href="https://github.com/felix-lipski" class="yellow">GitHub</a></li>
+        <li><a href="mailto:email@example.com" class="orange">Email</a></li>
         <li><a href="https://felix-lipski.itch.io/" class="red">itch.io</a></li>
       </ul>
     </section>
@@ -133,17 +129,19 @@
     <section>
       <p>Languages I have known and loved:</p>
       <ul>
-        <li><span class="red">Prolog</span></li>
-        <li><span class="yellow">Ocaml</span></li>
-        <li><span class="orange">Zig</span></li>
-        <li><span class="green">LISP</span></li>
-        <li><span class="red">Futhark</span></li>
-        <li><span class="yellow">Python</span></li>
         <li><span class="blue">GDScript</span></li>
-        <li><span class="yellow">Nim</span></li>
+        <li><span class="cyan">LISP</span></li>
+        <li><span class="green">Bash</span></li>
+        <li><span class="yellow">Python</span></li>
+        <li><span class="orange">Ocaml</span></li>
+        <li><span class="red">Prolog</span></li>
+        <li><span class="purple">Haskell</span></li>
         <li><span class="blue">Nix</span></li>
-        <li><span class="black">C</span></li>
+        <li><span class="cyan">C</span></li>
         <li><span class="green">C++</span></li>
+        <li><span class="yellow">Nim</span></li>
+        <li><span class="orange">Zig</span></li>
+        <li><span class="red">Futhark</span></li>
       </ul>
     </section>
 
@@ -152,8 +150,8 @@
       <p>Sounds I like and employ:
         <ul>
           <li>baroque eclecticism - mixing woodwinds and strings with non-classical genres</li>
-          <li>anything that reminds me of "game music" - Trackers, soundfonts, etc.</li>
-          <li>anything related to magnetic tapes - prime example being the Mellotron </li>
+          <li>anything that reminiscent of "game music" - Trackers, soundfonts, etc.</li>
+          <li>anything related to magnetic tapes</li>
           <li>"cheap" and broken sounds of toy instruments</li>
         </ul>
       </p>
@@ -186,7 +184,7 @@
       <p>I like all things industrial. Ruhr Valley is my favourite place on Earth.</p>
       <p>I know a bit of Latin, German, Russian and French, although not on a communicative level.</p>
       <p>I think creation is the highest virtue in life. <a href="https://lukesmith.xyz/articles/hedonism-asceticism-and-the-hermetic-answer/">Here's an interesting article on the matter.</a></p>
-      <p>I've invented a few dishes.</p>
+      <!-- <p>I've invented a few dishes.</p> -->
       <p>My other interests include: history, philosophy, religion</p>
     </section>
     <p class="header">Cool websites I enjoy</p>
