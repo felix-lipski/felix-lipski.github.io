@@ -10,6 +10,9 @@
       charset="utf-8"
     ></script>
     <style>
+      html {
+        scrollbar-color: #4477aa #000000;
+      }
       body {
         padding: 2em;
         color: #ffffdd;
@@ -28,7 +31,9 @@
       }
 
       main {
-        margin: 0 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-bottom: 5em;
       }
       li {
         margin-bottom: 5px;
@@ -110,12 +115,11 @@
         color: #ffffdd33;
       }
       .banner {
-        margin-bottom: 40px;
+        margin-bottom: 4em;
         max-width: 100%;
-        /* overflow: ; */
       }
 
-      button {
+      /* button {
         font-family: monospace;
         color: #ffffdd;
         background-color: #000000;
@@ -125,6 +129,48 @@
         background-color: #4477aa;
       }
       button:active {
+        background-color: #ffffdd;
+        color: #000000;
+        border-style: inset;
+      } */
+
+      .panel {
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 197px;
+      }
+
+      .theme-controls {
+        bottom: 25px;
+        right: 25px;
+        position: absolute;
+        margin: 0;
+        display: flex;
+        width: 520px;
+        justify-content: space-between;
+      }
+      .theme-controls span {
+        text-align: end;
+        flex-grow: 1;
+        background-color: #000000;
+        border-bottom: solid 1px #4477aa;
+        border-right: solid 1px #4477aa;
+      }
+      .theme-controls button {
+        font-family: monospace;
+        font-size: small;
+        color: #ffffdd;
+        background-color: #000000;
+        border-style: outset;
+        /* border-width: 1px; */
+        padding: 0 4px;
+      }
+      .theme-controls button:hover {
+        background-color: #4477aa;
+      }
+      .theme-controls button:active {
         background-color: #ffffdd;
         color: #000000;
         border-style: inset;
@@ -142,12 +188,6 @@
         <source src="spacelix/478.mp3" type="audio/ogg" />
         <source src="spacelix/478.mp3" type="audio/mpeg" />
       </audio>
-
-      <p>
-        ♬ Site theme controls:
-        <button onclick="playAudio()">Play/Resume ▶️</button>
-        <button onclick="pauseAudio()">Pause ⏸</button>
-      </p>
 
       <script>
         function playAudio() {
@@ -172,7 +212,7 @@
           <b class="blue">Spacelix</b>
           <b class="cyan">Opera</b>
           <b class="green">Landing</b>
-          <b class="yellow">Page</b><b class="orange">™</b><b>!</b>
+          <b class="yellow">Page</b><b>™!</b>
         </p>
         <p><b class="blue">Spacelix</b> <b class="cyan">Opera</b> is:</p>
         <ul>
@@ -216,7 +256,7 @@
           music compete for your attention. Here, they harmonise, as if it was a
           playable music video.
         </p>
-        <p>Here's a demonstration</p>
+        <p>Here's a demonstration:</p>
       </section>
       <div class="gallery">
         <!-- prettier-ignore -->
@@ -224,11 +264,6 @@
         <!-- prettier-ignore -->
         <blockquote class="twitter-tweet" data-media-max-width="512"> <p lang="en" dir="ltr"> First look at the game I&#39;m making <a href="https://twitter.com/hashtag/SpacelixOpera?src=hash&amp;ref_src=twsrc%5Etfw" >#SpacelixOpera</a ><br /><br />The idea is: Weapons and sound effects synchronize with the music to create a cool effect.<br /><br />The music is procedurally generated (not by AI!)<a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw" >#gamedev</a > <a href="https://twitter.com/hashtag/lofi?src=hash&amp;ref_src=twsrc%5Etfw" >#lofi</a > <a href="https://twitter.com/hashtag/indiegame?src=hash&amp;ref_src=twsrc%5Etfw" >#indiegame</a > <a href="https://twitter.com/hashtag/generativeart?src=hash&amp;ref_src=twsrc%5Etfw" >#generativeart</a > <a href="https://t.co/AbnaRipuwa">pic.twitter.com/AbnaRipuwa</a> </p> &mdash; Felix Lipski 🌈 SPACELIX OPERA (@felix_lipski) <a href="https://twitter.com/felix_lipski/status/1861733996448591994?ref_src=twsrc%5Etfw" >November 27, 2024</a > </blockquote>
       </div>
-      <p>
-        ♬ Site theme controls:
-        <button onclick="playAudio()">Play/Resume ▶️</button>
-        <button onclick="pauseAudio()">Pause ⏸</button>
-      </p>
       <p>*The site theme is not procedurally generated.</p>
       <section>
         <p>
@@ -269,21 +304,6 @@
           computing. The font used for example is an 8x8 IBM Bios font.
         </p>
         <p>
-          "spacelix" is the name of my color palette used in this game and
-          throughout my other works, like this site. Its main colors are: <br />
-          <b class="purple">magic blue</b>
-          <b class="blue">blue</b>
-          <b class="cyan">ice blue</b>
-          <b class="green">plantasia blue</b>
-          <b class="yellow">not blue</b>
-          <b class="orange">not blue</b>
-          <b class="red">not blue</b>
-          <b class="gray">dim blue</b>
-          <br />
-          Because the palette is so simple, you can very easily swap the color
-          to fit your favourite color scheme.
-        </p>
-        <p>
           The more vibrant rainbow visual effect will appear in more intense
           song sections, during which enemy spawn rate and your fire power will
           also be ramped up to create an unholy psychedelic mess.
@@ -297,6 +317,30 @@
         <img class="square-img" src="spacelix/yellow2.png" />
         <img class="square-img" src="spacelix/psyche1.png" />
         <img class="square-img" src="spacelix/cyan2.png" />
+      </div>
+      <p></p>
+
+      <section>
+        <p>
+          "spacelix" is the name of my color palette used in this game and
+          throughout my other works, like this site. Its main colors are: <br />
+          <b class="purple">magic blue</b>
+          <b class="blue">blue</b>
+          <b class="cyan">ice blue</b>
+          <b class="green">plantasia blue</b>
+          <b class="yellow">not blue</b>
+          <b class="orange">not blue</b>
+          <b class="red">not blue</b>
+          <b class="gray">dim blue</b>
+          <br />
+          Because the palette is so simple, you can very easily swap the color
+          to fit your favourite color scheme. I've put some popular ones into
+          the game:
+        </p>
+      </section>
+      <div class="gallery">
+        <img class="square-img" src="spacelix/palette-processed6.gif" />
+        <img class="square-img" src="spacelix/palette-rainbow-processed.gif" />
       </div>
 
       <p class="header">Tech stack</p>
@@ -382,10 +426,26 @@
           updates.
         </p>
         <p>
-          Direct any queries to felix.lipski7@gmail.com or to my Twitter dms.
+          Direct any queries to <b>felix.lipski7@gmail.com</b> or to my Twitter
+          dms. I'm open to ideas, suggestions and any help, especially regarding
+          the marketing, financing and community building aspects of the
+          project.
         </p>
         <p>See you, Space Cowboy... 🪐</p>
       </section>
+
+      <div class="panel">
+        <img src="spacelix/panel.png" />
+        <div class="theme-controls">
+          <span>♬ Site theme controls:</span>
+          <button class="theme-controls-button" onclick="playAudio()">
+            Play/Resume ▶️
+          </button>
+          <button class="theme-controls-button" onclick="pauseAudio()">
+            Pause ⏸
+          </button>
+        </div>
+      </div>
 
       <!-- <p class="header">FAQ <span class="you">you! jk jk ;D</span></p>
       <section>
