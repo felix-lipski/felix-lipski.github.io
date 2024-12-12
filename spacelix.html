@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:widgets:theme" content="dark" />
+    <title>Spacelix Opera 🌈 by Felix Lipski 🪐</title>
+    <script
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <style>
+      body {
+        padding: 2em;
+        color: #ffffdd;
+        background-color: #000000;
+        /* background-image: url(https://www.cameronsworld.net/img/content/2/bg.png); */
+        background-image: url(https://www.cameronsworld.net/img/content/3/bg.png);
+        /* color:#222222;
+          background-color: #ffffff; */
+        max-width: calc(1042px + 2em);
+        margin: 1rem auto;
+
+        font-family: monospace;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      main {
+        margin: 0 1em;
+      }
+      li {
+        margin-bottom: 5px;
+      }
+
+      iframe,
+      .foo,
+      section,
+      .square-img,
+      .wp {
+        border: 1px solid #4477aa;
+        background-color: #000000;
+      }
+
+      .spotify {
+        width: calc(100% - 2px);
+      }
+
+      section {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1em;
+        background-color: #00000088;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1em;
+      }
+
+      .square-img {
+        max-width: calc(100% - 2px);
+      }
+
+      .wp {
+        max-width: 100%;
+        max-height: 512px;
+        overflow-x: scroll;
+        scrollbar-color: #222222 #ffffdd;
+        background-color: #ffffdd;
+      }
+
+      .purple {
+        color: #6600ff;
+      }
+      .blue,
+      a {
+        color: #0066ff;
+      }
+      .cyan {
+        color: #00aa77;
+      }
+      .green {
+        color: #77aa00;
+      }
+      .yellow {
+        color: #ccbb00;
+      }
+      .orange {
+        color: #ee6600;
+      }
+      .red {
+        color: #cc2200;
+      }
+      .black {
+        color: #222222;
+      }
+      .gray {
+        color: #4477aa;
+      }
+      b,
+      a {
+        font-weight: bold;
+      }
+
+      .you {
+        color: #ffffdd33;
+      }
+      .banner {
+        margin-bottom: 40px;
+        max-width: 100%;
+        /* overflow: ; */
+      }
+
+      button {
+        font-family: monospace;
+        color: #ffffdd;
+        background-color: #000000;
+        border-style: outset;
+      }
+      button:hover {
+        background-color: #4477aa;
+      }
+      button:active {
+        background-color: #ffffdd;
+        color: #000000;
+        border-style: inset;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img class="banner" src="spacelix/banner-outline-white.gif" />
+      <a href="index.html" class="gray"
+        >&lt;- back to the main Felix Lipski site</a
+      >
+
+      <audio id="myAudio" autoplay>
+        <source src="spacelix/478.mp3" type="audio/ogg" />
+        <source src="spacelix/478.mp3" type="audio/mpeg" />
+      </audio>
+
+      <p>
+        ♬ Site theme controls:
+        <button onclick="playAudio()">Play/Resume ▶️</button>
+        <button onclick="pauseAudio()">Pause ⏸</button>
+      </p>
+
+      <script>
+        function playAudio() {
+          var audio = document.getElementById("myAudio");
+          audio.play();
+        }
+
+        function pauseAudio() {
+          var audio = document.getElementById("myAudio");
+          audio.pause();
+        }
+        window.addEventListener("blur", () => {
+          pauseAudio();
+          console.log("An iframe might have been clicked!");
+        });
+      </script>
+
+      <section>
+        <p>Hello, Space Cowboy!</p>
+        <p>
+          Seems like you've just landed on the
+          <b class="blue">Spacelix</b>
+          <b class="cyan">Opera</b>
+          <b class="green">Landing</b>
+          <b class="yellow">Page</b><b class="orange">™</b><b>!</b>
+        </p>
+        <p><b class="blue">Spacelix</b> <b class="cyan">Opera</b> is:</p>
+        <ul>
+          <li>a game I'm working on</li>
+          <li>a generative music project</li>
+          <li>an exploration of early computer aesthetics</li>
+        </ul>
+        <p>
+          Development updates are posted to
+          <a href="https://x.com/felix_lipski">my Twitter</a>. Follow if you're
+          interested!
+        </p>
+      </section>
+
+      <p class="header">Game</p>
+      <section>
+        <p>
+          As of now, on the gameplay level, it is a simple survivors-like /
+          bullet heaven with a twist. Many effects like explosions and weapon
+          firing are "synchronised" with the music. The survivors-like genre
+          lends itself nicely to this sort of project, as the timing of the
+          weapons is not controlled by the player.
+        </p>
+      </section>
+
+      <div class="gallery">
+        <img class="square-img" src="spacelix/pulse.gif" />
+        <img class="square-img" src="spacelix/angel.gif" />
+      </div>
+
+      <p class="header">Music Generation</p>
+      <section>
+        <p>
+          The music of the game is generated procedurally on the fly. As seen
+          below, the "pulse" weapon is firing and at the same time the bass is
+          playing. The explosions are hitting together with the snare. The
+          "blaster" shoots together with the higher synth. This is the central
+          idea of the game. As the music gets more and more intense, so will
+          your fire power and fire rate increase (by playing more notes a
+          second). In other games, or just in real life really, the effects and
+          music compete for your attention. Here, they harmonise, as if it was a
+          playable music video.
+        </p>
+        <p>Here's a demonstration</p>
+      </section>
+      <div class="gallery">
+        <!-- prettier-ignore -->
+        <blockquote class="twitter-tweet" data-media-max-width="512"> <p lang="en" dir="ltr"> new weapon, &quot;PULSE&quot;<br />fires together with the bass<br />perhaps a bit overpowered... :D<a href="https://twitter.com/hashtag/SpacelixOpera?src=hash&amp;ref_src=twsrc%5Etfw" >#SpacelixOpera</a > <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw" >#gamedev</a > <a href="https://twitter.com/hashtag/indiegame?src=hash&amp;ref_src=twsrc%5Etfw" >#indiegame</a > <a href="https://twitter.com/hashtag/generativeart?src=hash&amp;ref_src=twsrc%5Etfw" >#generativeart</a > <a href="https://twitter.com/hashtag/space?src=hash&amp;ref_src=twsrc%5Etfw" >#space</a > <a href="https://twitter.com/hashtag/synthwave?src=hash&amp;ref_src=twsrc%5Etfw" >#synthwave</a > <a href="https://twitter.com/hashtag/retro?src=hash&amp;ref_src=twsrc%5Etfw" >#retro</a > <a href="https://twitter.com/hashtag/lofi?src=hash&amp;ref_src=twsrc%5Etfw" >#lofi</a > <a href="https://t.co/zyqH7DUiLp">pic.twitter.com/zyqH7DUiLp</a> </p> &mdash; Felix Lipski 🌈 SPACELIX OPERA (@felix_lipski) <a href="https://twitter.com/felix_lipski/status/1862168659088589019?ref_src=twsrc%5Etfw" >November 28, 2024</a > </blockquote>
+        <!-- prettier-ignore -->
+        <blockquote class="twitter-tweet" data-media-max-width="512"> <p lang="en" dir="ltr"> First look at the game I&#39;m making <a href="https://twitter.com/hashtag/SpacelixOpera?src=hash&amp;ref_src=twsrc%5Etfw" >#SpacelixOpera</a ><br /><br />The idea is: Weapons and sound effects synchronize with the music to create a cool effect.<br /><br />The music is procedurally generated (not by AI!)<a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw" >#gamedev</a > <a href="https://twitter.com/hashtag/lofi?src=hash&amp;ref_src=twsrc%5Etfw" >#lofi</a > <a href="https://twitter.com/hashtag/indiegame?src=hash&amp;ref_src=twsrc%5Etfw" >#indiegame</a > <a href="https://twitter.com/hashtag/generativeart?src=hash&amp;ref_src=twsrc%5Etfw" >#generativeart</a > <a href="https://t.co/AbnaRipuwa">pic.twitter.com/AbnaRipuwa</a> </p> &mdash; Felix Lipski 🌈 SPACELIX OPERA (@felix_lipski) <a href="https://twitter.com/felix_lipski/status/1861733996448591994?ref_src=twsrc%5Etfw" >November 27, 2024</a > </blockquote>
+      </div>
+      <p>
+        ♬ Site theme controls:
+        <button onclick="playAudio()">Play/Resume ▶️</button>
+        <button onclick="pauseAudio()">Pause ⏸</button>
+      </p>
+      <p>*The site theme is not procedurally generated.</p>
+      <section>
+        <p>
+          The idea is nothing <em>that</em> revolutionary, we have games like
+          Crypt of the Necrodancer and Bullets per Minute, but as far as I know,
+          all of the existing implementations are very mechanically demanding,
+          or even straining. Nothing wrong with a challanging game of course,
+          but I'd rather make something that:
+        </p>
+        <ul>
+          <li>
+            Sounds more cohesive, because it doesn't rely on player input so
+            heavily.
+          </li>
+          <li>
+            Can be enjoyed by a wider audience, due to being less hardcore.
+          </li>
+        </ul>
+      </section>
+
+      <p class="header">Visual aspects</p>
+      <section>
+        <p>
+          I'm aiming for a psychedelic version of the very early video game
+          vector art. Think Asteroids, or the 1983 Star Wars arcade shooter.
+          <a href="https://scumgames.neocities.org/blazeitfgt"
+            >This amazing TempleOS project</a
+          >
+          is also a major inspiration.
+        </p>
+        <p>
+          The more "filled in" spaces make heavy use of ordered dithering,
+          probably my favourite visual effect. This further evokes the very
+          early video game aesthetic.
+        </p>
+        <p>
+          In general all other elements will also evoke the nostalgia of early
+          computing. The font used for example is an 8x8 IBM Bios font.
+        </p>
+        <p>
+          "spacelix" is the name of my color palette used in this game and
+          throughout my other works, like this site. Its main colors are: <br />
+          <b class="purple">magic blue</b>
+          <b class="blue">blue</b>
+          <b class="cyan">ice blue</b>
+          <b class="green">plantasia blue</b>
+          <b class="yellow">not blue</b>
+          <b class="orange">not blue</b>
+          <b class="red">not blue</b>
+          <b class="gray">dim blue</b>
+          <br />
+          Because the palette is so simple, you can very easily swap the color
+          to fit your favourite color scheme.
+        </p>
+        <p>
+          The more vibrant rainbow visual effect will appear in more intense
+          song sections, during which enemy spawn rate and your fire power will
+          also be ramped up to create an unholy psychedelic mess.
+        </p>
+      </section>
+
+      <div class="gallery">
+        <img class="square-img" src="spacelix/eden_laser.gif" />
+        <img class="square-img" src="spacelix/rainbow-cut.gif" />
+        <img class="square-img" src="spacelix/navy2.png" />
+        <img class="square-img" src="spacelix/yellow2.png" />
+        <img class="square-img" src="spacelix/psyche1.png" />
+        <img class="square-img" src="spacelix/cyan2.png" />
+      </div>
+
+      <p class="header">Tech stack</p>
+      <section>
+        <p>
+          The game is written in Haskell with the Raylib bindings. Apecs is used
+          to manage entities. Box2D is used for the physics. The audio backend
+          is also written in Haskell, using the csound-expression bindings to
+          Csound. The characters are modelled in Blender. All is currently
+          developed on GNU/Linux.
+        </p>
+      </section>
+
+      <p class="header">Why</p>
+      <section>
+        <ul>
+          <li>
+            I want to showcase the music generation algorithm I've been working
+            on for some time now
+          </li>
+          <li>
+            Every psychedelic game with kickass music I know, is kinda hard. The
+            games made specifically to be psychedelic, are usually very calm and
+            ambience driven. One way to look at the aim of this game is a less
+            gory, easier Hotline Miami. I <em>know</em> there is a niche for
+            that ;)
+          </li>
+          <li>
+            Further development of this music generation algorithm is an
+            imperative goal in itself.
+            <details>
+              <summary>Longer Rant</summary>
+              My conjecture is that music is an art abstract enough, that it can
+              be generalised by some universal algorithm. And yes, by that, I
+              mean
+              <em>all</em> music. Unlike visual arts or literature, music relies
+              on references to concrete physical objects to a much lesser
+              extent. It is the purest way in which our brain notices patterns
+              in sensory experiences. I have my own takes on "music theory" (or
+              lack therof). I will expand on this in the future. Probably in a
+              book / manifesto form. But for now, this games serves as an
+              exploration of this problem space.
+            </details>
+          </li>
+          <li>
+            The vector aesthetic of very early video games is suprisingly
+            under-explored by indie developers. In fact, the closest I can think
+            of is a "bloomed" version in games like Geometry Wars
+          </li>
+          <!-- <li>
+            The early raytraced/POV-ray aesthetic is likewise mostly lost to
+            time, although being slowly dug up.
+          </li> -->
+          <li>
+            I'm a certified Arch user (btw) and I want a video game to fit my
+            fully riced power desktop (the game has an adjustable color palette)
+          </li>
+        </ul>
+      </section>
+
+      <p class="header">Roadmap</p>
+      <section>
+        <ul>
+          <li>🗹 Proof of concept</li>
+          <li>🗹 A few playable characters</li>
+          <li>🗹 VFX</li>
+          <li>🗹 Switchable color palettes</li>
+          <li>↻ Improvement to the music generation - in progress</li>
+          <li>☐ Weapon leveling system</li>
+          <li>☐ Compile on Windows</li>
+          <li>☐ Release playable demo</li>
+          <li>☐ UI polish</li>
+          <li>☐ Enemy variety</li>
+          <li>... to be announced</li>
+        </ul>
+      </section>
+
+      <p class="header">Further reading</p>
+      <section>
+        <p>
+          ...and that's it for now. ;D Follow
+          <a href="https://x.com/felix_lipski">my Twitter</a> for development
+          updates.
+        </p>
+        <p>
+          Direct any queries to felix.lipski7@gmail.com or to my Twitter dms.
+        </p>
+        <p>See you, Space Cowboy... 🪐</p>
+      </section>
+
+      <!-- <p class="header">FAQ <span class="you">you! jk jk ;D</span></p>
+      <section>
+        <ul>
+          <li>
+            Does the music generation use AI / neural nets / machine
+            learning?<br />- No... In fact, here's a video showcasing some early
+            version of the music generation in 2021, well before any listenable
+            music could be generated by AI:
+            <a href="https://www.youtube.com/watch?v=Zd2NBQKT5jU">link</a>
+          </li>
+          <li>
+            Will you open the source?<br />- I'd like to in the future. In fact
+            I'd be very willing to open it now, except for the music generation
+            part, or "the sauce" if you will. This is simply too dear at this
+            moment.
+          </li>
+          <li>
+            Why don't you work on the game instead of making a gimmick site?<br />-
+            Making simple websites like this is fun and easy. I urge you to try!
+          </li>
+          <li>Did anyone actually ask these questions?<br/>- Over the internet, no.</li>
+        </ul>
+      </section> -->
+    </main>
+  </body>
+</html>
