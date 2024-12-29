@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>98.css example</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk&family=Nabla&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scrollbar-color: #4477aa #121212;
+        color: #ffffdd;
+        text-shadow: 1px 1px 0px #121212;
+        font-optical-sizing: auto;
+        font-weight: bold;
+      }
+      body {
+        padding: 16px;
+        background-color: #121212;
+        background-image: url(textures/comp016-outline.png),
+          url(textures/comp020bigger.png), url(textures/pdj50136.png);
+        max-width: calc(1042px + 2em);
+        margin: 16px auto;
+        background-position: 0 0, 0 0, 0 0;
+
+        animation: animate-middle-layer 1s infinite steps(70);
+      }
+
+      @keyframes animate-middle-layer {
+        /* 0% {
+          background-position: 0 0, 0 0, 0 0;
+        }
+        15% {
+          background-position: 0 0, 04px calc(70px * 0.15), 0 0;
+        }
+        35% {
+          background-position: 0 0, 16px calc(70px * 0.35), 0 0;
+        }
+        50% {
+          background-position: 0 0, 20px 35px, 0 0;
+        }
+        65% {
+          background-position: 0 0, 16px calc(70px * 0.65), 0 0;
+        }
+        85% {
+          background-position: 0 0, 04px calc(70px * 0.85), 0 0;
+        }
+        100% {
+          background-position: 0 0, 0 70px, 0 0;
+        } */
+        0% {
+          background-position: 0 0, 0 0, 0 0;
+        }
+        100% {
+          background-position: 0 0, 0 70px, 0 128px;
+        }
+      }
+      main {
+        margin-right: 16px;
+        margin-left: 16px;
+        margin-bottom: 16px;
+      }
+      section {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 16px;
+        background-image: url(textures/BRUSHED.png);
+        box-shadow: inset -1px -1px #121212, inset 1px 1px #ffffdd,
+          inset -2px -2px #224455, inset 2px 2px #c3aa6e;
+        border: #121212 1px solid;
+      }
+      .rusted {
+        background-image: url(textures/PLATEOX2.png);
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1em;
+      }
+
+      .square-img {
+        max-width: calc(100% - 2px);
+      }
+
+      .purple {
+        color: #6600ff;
+      }
+      .blue,
+      a {
+        color: #0066ff;
+      }
+      .cyan {
+        color: #00aa77;
+      }
+      .green {
+        color: #77aa00;
+      }
+      .yellow {
+        color: #ccbb00;
+      }
+      .orange {
+        color: #ee6600;
+      }
+      .red {
+        color: #cc2200;
+      }
+      .black {
+        color: #222222;
+      }
+      .gray {
+        color: #4477aa;
+      }
+      .pink {
+        color: #cc22aa;
+      }
+      b,
+      a {
+        font-weight: bold;
+      }
+      p {
+        margin: 16px 0;
+        font-family: "Press Start 2P", monospace;
+        font-size: 8px;
+      }
+      h1 {
+        font-family: "Honk";
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Some paragraph</h1>
+      <section>
+        <!-- <header>Title</header> -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+      <h1>Other paragraph</h1>
+      <section class="rusted">
+        <!-- <header>Title</header> -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+    </main>
+    <!-- <div class="window" style="margin: 32px; width: 250px">
+      <div class="title-bar">
+        <div class="title-bar-text">My First VB4 Program</div>
+
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Hello, world!</p>
+        <section class="field-row" style="justify-content: flex-end">
+          <button>OK</button>
+          <button>Cancel</button>
+        </section>
+      </div>
+    </div> -->
+  </body>
+</html>
